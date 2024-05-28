@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-left: 400px;
+            margin-top: 200px;
+            height: 170px;
+            width: 600px;
+            background-image: url(./backimg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 5px solid white ;
+            border-radius: 15px;
+        }
+        label{
+            color: white;
+        }
+    </style>
+    <script>
+        function phonevalidation(){
+            var Phone_Number1=document.getElementById("phone1").value;
+        if ((Phone_Number1<=9999999999)&&(Phone_Number1>=6000000000)){
+            window.location.href='otp2fp.html'
+        }
+        else{
+            document.getElementById("result2").innerHTML="Incorrect OTP"
+        }
+        }
+    </script>
+</head>
+<body>
+    <center><h3 style="color: white;"><u>Forget Password Page</u></h3></center>
+    <center>
+        <label for="">Phone: </label><input type="number" id="phone1">
+        <br>
+        <br>
+        <button onclick="phonevalidation()">Send OTP</button>
+        <p id="result2" style="color: white;"></p><br>
+        </center>
+</body>
+</html>
