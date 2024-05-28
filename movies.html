@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+    <script>
+        function Social_Media(){
+             choice= document.getElementById("user_choice").value;
+            if(choice=='Tamil'){
+                window.location.href='./tamilmovies.html'
+            }
+            else if(choice=='English'){
+                window.location.href='./englishmovies'
+            }
+            else if(choice=='Malayalam'){
+                window.location.href='./malayalammovies.html'
+            }
+        }
+    </script>
+    <style>
+        img:hover{
+            animation: shake 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <img src="./logo new.jpeg" alt=""height="100px"width="100px"> 
+    <h1><span>HOPE</span> & VIBE</h1>
+    <label for="">LANGUAGE</label>
+    <select name="" id="user_choice">
+        <option value="Tamil">Tamil_Movies</option>
+        <option value="English">English_Movies</option>
+        <option value="Malayalam">Malayalam_Movies</option>
+    </select>
+    <button onclick="Social_Media()"> NEXT</button>
+    <h3><span>ACTION </span>MOVIES</h3>
+    <a href="./kaithimovie.html"><img src="./images/action movie img/kaithi.jpg" alt="" height="200px" "></a>
+    <a href="./thekillermovie.html"><img src="./images/action movie img/kille.jpg" alt="" height="200px" ></a>
+    <a href="./oldboymovie.html"><img src="./images/action movie img/oldboy.jpg" alt="" height="200px" ></a>
+    <a href="./kaduvamovie.html"><img src="./images/action movie img/kaduva.jpg" alt="" height="200px" ></a>
+    <a href="./kammatipaadammovie.html"><img src="./images/action movie img/kammatipaadam.jpg" alt="" height="200px" ></a>
+    <h3><span>SCI FI </span>MOVIES</h3>
+    <a href="./24movie.html"><img src="./images/sci-fi movie img/24.jpg" alt=""height="200px"></a>
+    <a href="./indrunetrunaalaimovie.html"><img src="./images/sci-fi movie img/indru.jpg" alt=""height="200px"></a>
+    <a href="./bladerunnermovie.html"><img src="./images/sci-fi movie img/bladerunner.jpg" alt=""height="200px"></a>
+    <a href="./interstellarmovie.html"><img src="./images/sci-fi movie img/interstellar.jpg" alt=""height="200px"></a>
+    <a href="./minnalmuralimovie.html"><img src="./images/sci-fi movie img/minnnal.jpg" alt=""height="200px"></a>
+    <h3><span>WEB</span> SERIES</h3>
+    <a href="./suzhalseries.html"><img src="./images/web series img/suzhal.jpg" alt=""height="200px"></a>
+    <a href="./vadhandhiseries.html"><img src="./images/web series img/vadhandhi.jpg" alt=""height="200px"></a>
+    <a href="./gotseries.html"><img src="./images/web series img/Got.jpg" alt=""height="200px"></a>
+    <a href="./peakyblindersseries.html"><img src="./images/web series img/peaky.jpg" alt=""height="200px"></a>
+    <a href="./keralacrimefiles.html"><img src="./images/web series img/kerala.jpg" alt=""height="200px"></a>
+</body>
+</html>

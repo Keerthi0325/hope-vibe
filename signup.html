@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-left: 450px;
+            margin-top: 150px;
+            height: 340px;
+            width: 400px;
+            background-image: url(./back1img.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 5px solid white ;
+            border-radius: 15px;
+        }
+        label{
+            color:aliceblue;
+        }
+    </style>
+    <script>
+       function Signup_Validation (){
+         var Phone_Number=document.getElementById("phone").value;
+         var phone_flag=false;
+        if ((Phone_Number<=9999999999)&&(Phone_Number>=6000000000)){
+            phone_flag=true;
+        }
+        <!-- email_validation -->
+        var Email=document.getElementById("email").value;
+        var email_flag=false
+        var flag1=true
+        var flag2=false
+        for(var i=0;i<=Email.length;i++)
+        {
+            if((Email[i]<='Z')&&(Email[i]>='A')){
+                flag1=false
+            }
+            if(Email[i]='@'){
+               flag2=true
+            }
+        }
+        if((flag1==true)&&(flag2==true)){
+            email_flag=true
+        }
+        
+        //password_validation
+        var Password=document.getElementById("pass").value;
+        var Password_flag=false
+        var size=0
+        var upper=0
+        var lower=0
+        var num=0
+        var special=0
+        for(var i=0;i<Password.length;i++){
+            size++
+            if((Password[i]>='A')&&(Password[i]<='Z'))
+            {
+                upper++
+            }
+            else if ((Password[i]>='a')&&(Password[i]<='z'))
+            {
+                lower++
+            }
+            else if((Password[i]>='0')&&(Password[i]<='9')){
+                num++
+            }
+            else{
+                special++
+            }
+        }
+        if((size<=16)&&(size>=8)&&(upper>=1)&&(lower>=1)&&(num>=1)&&(special>=1))
+        {
+            Password_flag=true;
+        }
+        //confirm password validation
+        var confirm_password=document.getElementById("confirm_pass").value;
+        confirm_flag=false
+        if(Password==confirm_password){
+            confirm_flag=true
+        }
+
+        //final validation
+        
+        if((phone_flag==true)&&(email_flag==true)&&(Password_flag==true)&&(confirm_flag==true)){
+            window.location.href="./otp1su.html"
+        }
+        else{
+            // alert("Invalid Details")
+            document.getElementById("result").innerHTML="Invalid Details"
+
+            document.getElementById("result").style.color="red"
+        }
+
+       }
+    
+    </script>
+</head>
+<body>
+    <center><h3 style="color: white;"><u>SIGN UP PAGE</u></h3></center>
+   <center>
+    <form>
+        <table>
+            <br><br>
+            <tr>
+                <td><label for="">Full Name :</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="">DOB :</label></td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td><label for="">Phone_Number :</label></td>
+                <td><input type="number" id="phone"></td>
+            </tr>
+            <tr>
+                <td><label for="">E-Mail :</label></td>
+                <td><input type="text" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="">User_Name :</label></td>
+                <td><input type="name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Password :</label></td>
+                <td><input type="password" id="pass"></td>
+            </tr>
+            <tr>
+                <td><label for="">Conform Password :</label></td>
+                <td><input type="password" id="confirm_pass"></td>
+            </tr>
+            <tr><td><input type="checkbox"><label for="">I agree...</label></td></tr>
+        </table>
+    </form>
+    <a href="./index.html"><button>Cancel</button></a>
+    <button onclick="Signup_Validation()">Next</button>
+    <p id="result"></p>
+
+   </center>
+</body>
+</html>

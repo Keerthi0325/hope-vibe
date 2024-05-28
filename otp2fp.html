@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-left: 400px;
+            margin-top: 180px;
+            height: 200px;
+            width: 600px;
+            background-image: url(./backimg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 5px solid white ;
+            border-radius: 15px;
+        }
+        label{
+            color: white;
+        }
+    </style>
+     <script>
+        var otp=Math.floor(Math.random()*9999);
+        {
+            alert(otp)
+
+        }
+        function OTPVerification1(){
+            var UserOtp=document.getElementById("userotp1").value;
+            if (UserOtp==otp){
+                window.location.href="./index.html"
+            }
+            else{
+                document.getElementById("result1").innerHTML="Incorrect OTP"
+                
+            }
+        }
+        function resend_otp(){
+            window.location.href="./otp2fp.html"
+        }
+    </script> 
+</head>
+<body>
+    <center>
+    <h3 style="color: white;">OTP Verification</h3>
+   <input type="text" id="userotp1"><br>
+    <button onclick="OTPVerification1()">Verify OTP</button>
+    <p id="result1" style="color: white;"></p><br>
+   <button onclick="resend_otp()">Resend OTP</button>
+    </center>
+</body>
+</html>
